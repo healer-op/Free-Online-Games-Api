@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link class="analogo" rel="icon" href="/img/logo.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="<%=datau[0].text%> Free">
+    <meta name="keywords" content="Free Games, Popular Games, Free Full Games, Games">
+    <meta name="author" content="Healer-op">
+    <meta name="og:title" content="<%=datau[0].text%> Free"/>
+      <meta name="og:description" content="<%=datau[0].text%> Free"/>
+      <meta name="og:image" content="<%=datas[0].img%>"/>
+      <meta name="image" property="og:image" content="<%=datas[0].img%>"/>
+      <meta name="twitter:card" content="summary_large_image"/>
+      <meta name="twitter:title" content="<%=datau[0].text%> Free"/>
+      <meta name="twitter:description" content="<%=datau[0].text%> Free"/>
+      <meta name="twitter:image" content="<%=datas[0].img%>"/>
+    <title>Weeb Games | <%=datau[0].text%> Free</title>
+
+    <!-- MY CSS -->
+    <link rel="stylesheet" href="/css/aboutMe.css">
+
+    <!-- GOOGLE FONTS CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+
+    <!-- FONT AWESOME CSS -->
+    <link rel="stylesheet" href="/css/all.min.css">
+    <link rel="stylesheet" href="/css/fontawesome.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container">
+            <div class="menuArea">
+                <i class="fa fa-bars menuBtn"></i>
+            </div>
+            <div class="logoArea">
+                <a href="/" class="image"><img src="/img/logo.png"></a>
+                <a href="/" class="text">
+                    <h1><span class="highlight">Free</span> Full Games</h1>
+                </a>
+            </div>
+            <div class="navBar">
+                <ul>
+                    <li><a href="/" class="active">🏠Home</a></li>
+                    <li><a href="/action">🏹Action</a></li>
+                    <li><a href="/adventure">🔑Adventure</a></li>
+                    <li><a href="/simulation">💃Simulation</a></li>
+                    <li><a href="/sports">⚽Sports</a></li>
+                    <li><a href="/racing">🚗Racing</a></li>
+                    <li><a href="/horror">💀Horror</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+
+
+    <!-- MAIN -->
+    <div id="main">
+        <div class="container">
+
+            <!-- BLOG AREA -->
+            <style>
+                .okay{
+
+                    height: max-content;
+                }
+            </style>
+            <div class="blogArea">
+                <div class="blog row1">
+                    <img src="<%=datas[0].img%>" class="okay">
+                    
+                    
+                </div>
+                <div class="blog row2">
+                    <ul>
+                        <li><h1 style="font-weight: 900;"><%=datau[0].text%> Free</h1></li>
+                        <li><h1 style="color:red"><%=datat[0].text%></h1></li>
+                        <li style="display: flex;"><h1 style="color:green;">Total Download:</h1><h1><%=Math.floor((Math.random() * 30) + 1)%>.<%=Math.floor((Math.random() * 30) + 1)%>K</h1></li>
+                        <br>
+                        <li><h1 style="font-weight: 900;">Trailer</h1></li>
+                        <li>
+                            <iframe width="560" height="315" src="<%=datav[0].text%>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </li>
+                        <br>
+                        <li><h1 style="font-weight: 900;">Download Links</h1></li>
+                        <% for(const d of datar) {%> 
+                            <li><h1><%=d.text%></h1>  <a href="<%=d.link%>"><%=d.link%></a></li><br>
+                            <% } %>
+                    </ul>
+
+                </div>
+            </div>
+
+
+
+
+            <!-- ASIDE AREA -->
+            <%- include("sidebar") -%>
+        </div>
+    </div>
+
+
+
+    <!-- FOOTER -->
+    <div id="footer">
+        <div class="container">
+            <div class="navBar">
+                <ul>
+                    <li><a href="/" class="active">🏠Home</a></li>
+                    <li><a href="/action">🏹Action</a></li>
+                    <li><a href="/adventure">🔑Adventure</a></li>
+                    <li><a href="/simulation">💃Simulation</a></li>
+                    <li><a href="/sports">⚽Sports</a></li>
+                    <li><a href="/racing">🚗Racing</a></li>
+                    <li><a href="/horror">💀Horror</a></li>
+                </ul>
+            </div>
+            <%- include("footer") -%>
+        </div>
+    </div>
+</body>
+<script src="js/navbar.js"></scrip>
+
+</html>

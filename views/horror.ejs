@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link class="analogo" rel="icon" href="/img/logo.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Download Popular Games for Free">
+    <meta name="keywords" content="Free Games, Popular Games, Free Full Games, Games">
+    <meta name="author" content="Healer">
+    <title>Weeb Games</title>
+
+    <!-- MY CSS -->
+    <link rel="stylesheet" href="/css/menu.css">
+
+    <!-- GOOGLE FONTS CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+
+    <!-- FONT AWESOME CSS -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/fontawesome.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container">
+            <div class="menuArea">
+                <i class="fa fa-bars menuBtn"></i>
+            </div>
+            <div class="logoArea">
+                <a href="/" class="image"><img src="img/logo.png"></a>
+                <a href="/" class="text">
+                    <h1><span class="highlight">Free</span> Full Games</h1>
+                </a>
+            </div>
+            <div class="navBar">
+                <ul>
+                    <li><a href="/" class="active">🏠Home</a></li>
+                    <li><a href="/action">🏹Action</a></li>
+                    <li><a href="/adventure">🔑Adventure</a></li>
+                    <li><a href="/simulation">💃Simulation</a></li>
+                    <li><a href="/sports">⚽Sports</a></li>
+                    <li><a href="/racing">🚗Racing</a></li>
+                    <li><a href="/horror">💀Horror</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    
+
+    <!-- MAIN -->
+    <div id="main">
+        <div class="container">
+
+            <!-- BLOG AREA -->
+            <div class="blogArea">
+                <% for(const d of datar) {%> 
+                    <div class="blog">
+                        <a href="/d/<%=d.link%>"><img src="<%=d.img%>"></a>
+                        <div class="post-container">
+                            <h1><a href="/d/<%=d.link%>"><%=d.title%></a></h1>
+                            <h2><i class="fas fa-user"></i><a href=""> Healer</a> &ensp;<i
+                                    class="far fa-clock"></i> <%=Math.floor((Math.random() * 30) + 1)%>/<%=Math.floor((Math.random() * 12) + 1)%>/2022</h2>
+                            <p><%=d.sum%></p>
+                        </div>
+                    </div>
+                    <% } %>
+                
+                    <div class="buttonArea">
+                        <a href="/hop/<%=datas[0].link%>"><button class="btn">Previous</button></a>
+                        <a style="margin-left:2vh" href="/hop/<%=datas[datas.length-1].link%>"><button class="btn">Next</button></a>
+                    </div>
+            </div>
+
+
+
+
+            <!-- ASIDE AREA -->
+            <%- include("sidebar") -%>
+        </div>
+    </div>
+
+
+
+    <!-- FOOTER -->
+    <div id="footer">
+        <div class="container">
+            <div class="navBar">
+                <ul>
+                    <li><a href="/" class="active">🏠Home</a></li>
+                    <li><a href="/action">🏹Action</a></li>
+                    <li><a href="/adventure">🔑Adventure</a></li>
+                    <li><a href="/simulation">💃Simulation</a></li>
+                    <li><a href="/sports">⚽Sports</a></li>
+                    <li><a href="/racing">🚗Racing</a></li>
+                    <li><a href="/horror">💀Horror</a></li>
+                </ul>
+            </div>
+            <%- include("footer") -%>
+        </div>
+    </div>
+</body>
+<script src="js/navbar.js"></script>
+
+</html>
